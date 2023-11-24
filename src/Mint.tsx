@@ -27,7 +27,8 @@ export function MintNFT() {
 
   return (
     <div>
-      <button disabled={!write || isLoading} onClick={() => write()}>
+      <button disabled={!write || isLoading} onClick={() => write?.()}>
+      {/* <button disabled={!write || isLoading} onClick={() => write()}> */}
         {isLoading ? 'Minting...' : 'Mint'}
       </button>
       {isSuccess && (
